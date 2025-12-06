@@ -1,0 +1,1027 @@
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* KPI Cards Grid */
+.kpi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+/* Individual KPI Card */
+.kpi-card {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  min-width: 0;
+}
+
+.kpi-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.kpi-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Inter", sans-serif;
+}
+
+.kpi-card h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 0 16px;
+  }
+
+  .dashboard-header h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .kpi {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .kpi-card {
+    padding: 16px;
+  }
+
+  .kpi-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RFP List Section */
+.rfp-list-section {
+  margin-top: 40px;
+}
+
+.rfp-list-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.no-rfps {
+  text-align: center;
+  color: #6b7280;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.rfp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* RFP Card */
+.rfp-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.rfp-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.rfp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rfp-id {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-status {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-status.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.rfp-status.received {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.rfp-card-body {
+  margin-bottom: 16px;
+}
+
+.rfp-date {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-vendors {
+  font-size: 14px;
+  color: #2563eb;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-detail-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+.view-detail-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Detail Modal */
+.detail-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.detail-modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.detail-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-modal-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-id-display {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: #111827;
+}
+
+.detail-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.rfp-status-badge.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.rfp-status-badge.received {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.chatbot-response {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  font-family: "Inter", sans-serif;
+}
+
+.vendor-list-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.vendor-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vendor-item:hover {
+  border-color: #2563eb;
+  background-color: #f0f9ff;
+}
+
+.vendor-item.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.vendor-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.vendor-info {
+  flex: 1;
+}
+
+.vendor-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.vendor-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+}
+
+.selected-vendors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selected-vendor-item {
+  padding: 12px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.selected-vendor-item strong {
+  font-size: 16px;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.selected-vendor-item span {
+  font-size: 14px;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+}
+
+.detail-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 1px solid #e5e7eb;
+  justify-content: flex-end;
+}
+
+.send-rfp-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #2563eb;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.send-rfp-btn:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+.send-rfp-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.send-rfp-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Detail Modal Tabs */
+.detail-modal-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+.tab-btn:hover:not(:disabled) {
+  color: #2563eb;
+  background-color: #f0f9ff;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background-color: white;
+}
+
+.tab-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Proposals Section */
+.proposals-section {
+  padding: 0;
+}
+
+.no-proposals {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.proposal-hint {
+  font-size: 14px;
+  margin-top: 12px;
+  color: #9ca3af;
+}
+
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proposal-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.proposal-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.proposal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.proposal-header h4 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.proposal-date {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+}
+
+.proposal-status {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.proposal-status.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.proposal-status.reviewed {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.proposal-status.accepted {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.proposal-status.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.proposal-data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proposal-field {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  font-family: "Inter", sans-serif;
+}
+
+.proposal-field strong {
+  color: #111827;
+  margin-right: 8px;
+}
+
+.proposal-field ul {
+  margin: 8px 0 0 20px;
+  padding: 0;
+}
+
+.proposal-field li {
+  margin: 4px 0;
+}
+
+/* Comparison Section */
+.comparison-section {
+  padding: 0;
+}
+
+.comparison-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recommendation-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.recommendation-box h4 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.recommendation-content {
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+  font-family: "Inter", sans-serif;
+}
+
+.comparison-summary {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+}
+
+.comparison-summary h4 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.comparison-summary p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  white-space: pre-line;
+  font-family: "Inter", sans-serif;
+}
+
+.scores-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.scores-section h4 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.score-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.score-card h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  font-family: "Inter", sans-serif;
+}
+
+.score-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.detailed-comparison {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.detailed-comparison h4 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.comparison-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  white-space: pre-wrap;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+/* Proposals Header */
+.proposals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.proposals-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.submit-proposal-btn {
+  padding: 8px 16px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+.submit-proposal-btn:hover {
+  background-color: #059669;
+}
+
+/* Submit Proposal Modal */
+.submit-proposal-modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 200px;
+}
+
+.proposal-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.vendor-item input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Compare Button Primary */
+.compare-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.compare-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.compare-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.generate-comparison-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: "Inter", sans-serif;
+  margin-top: 16px;
+}
+
+.generate-comparison-btn:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+.generate-comparison-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.no-comparison {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.loading-comparison {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-comparison p {
+  font-size: 16px;
+  color: #374151;
+  margin: 8px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.loading-hint {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.best-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #10b981;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.score-card {
+  position: relative;
+}
+
+.score-breakdown {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.score-breakdown div {
+  margin: 4px 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rfp-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .detail-modal-tabs {
+    flex-wrap: wrap;
+    padding: 0 16px;
+  }
+
+  .tab-btn {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .scores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proposals-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .submit-proposal-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
+
+/* Success Modal */
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.success-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.success-modal h2 {
+  margin: 20px 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.success-modal p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #374151;
+  font-family: "Inter", sans-serif;
+}
+
+.success-hint {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
